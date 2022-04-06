@@ -37,6 +37,7 @@ const fp = flatpickr(refs.inputEl, options);
 function onCloseFunction(date) {
     if (Date.now() > date) {
         Notify.failure('Please choose a date in the future');
+        refs.startBtn.disabled = isDisabled;
     } else {
       refs.startBtn.disabled = !isDisabled;
         chosenDate = date;
